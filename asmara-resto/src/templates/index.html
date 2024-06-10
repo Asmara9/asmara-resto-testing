@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Apps</title>
+    <meta name="theme-color" content="#DB0000" />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link rel="icon" href="./favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+    <script>
+      // JavaScript
+      function toggleDrawer() {
+        var navbarToggle = document.getElementById("navigationDrawer");
+        navbarToggle.style.display === "none" ||
+        navbarToggle.style.display === ""
+          ? (navbarToggle.style.display = "block")
+          : (navbarToggle.style.display = "none");
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-to-content">Skip to Content</a>
+
+    <header class="navbar">
+      <h1>Asmara Resto</h1>
+
+      <button id="hamburgerButton" class="toggle-btn" onclick="toggleDrawer()">
+        ☰
+      </button>
+
+      <nav class="navbar-links" id="navigationDrawer">
+        <a href="#/home" tabindex="0">Home</a>
+        <a href="#/favorite" tabindex="0">Favorite</a>
+        <a href="https://github.com/Asmara9" tabindex="0">About Us</a>
+      </nav>
+    </header>
+
+    <main id="mainContent" tabindex="-1">
+      <h2>Welcome to Asmara Resto</h2>
+      <p>Anda lapar kami siap kenyangkan</p>
+    </main>
+
+    <footer class="footer">
+      <div id="footerTools">
+        <button id="subscribePushNotification" class="btn">
+          Subscribe Push Notification
+        </button>
+        <button id="unsubscribePushNotification" class="btn">
+          Unsubscribe Push Notification
+        </button>
+      </div>
+      <p>&copy; 2024 - Asmara Resto || Anda Kenyang Kami Kenyang</p>
+    </footer>
+  </body>
+</html>
