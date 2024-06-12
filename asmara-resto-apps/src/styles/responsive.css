@@ -1,0 +1,206 @@
+/* Media query untuk layar dengan lebar >= 1200px */
+@media screen and (min-width: 1200px) {
+    img{
+      width: 1000px;
+      margin: 0 auto;
+    } 
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+  
+    .toggle-btn {
+        display: block;
+        border-radius: 1rem;
+        position: absolute;
+        left: 0;
+}
+  
+.navbar-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  top: 60px;
+  left: 0px;
+  right: 0;
+  background-color: #000000;
+  width: 38%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-links.open {
+  animation: slideIn 0.5s forwards; /* Animasi untuk memunculkan navbar */
+}
+
+.navbar-links.close {
+  animation: slideOut 0.5s forwards; /* Animasi untuk menyembunyikan navbar */
+}
+
+@keyframes slideIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.navbar-links a {
+  display: flex;
+  justify-content: left;
+  width: 50%;
+  padding: 13px 20px;
+}
+
+.navbar a {
+  margin: 0px;
+}
+
+.navbar a:hover {
+  color: #007bff;
+  background-color: #000000;
+}
+  
+    img {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  
+    #restaurantList {
+      padding: 10px;
+    }
+  
+    .restaurant {
+      margin: 0.5rem;
+      width: 90%;
+    }
+  
+    .restaurant img {
+      width: 100%;
+      margin: 0px;
+    }
+  
+    #mainContent {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  
+    #mainContent p {
+      font-size: 0.9rem;
+    }
+  
+    .title-rest {
+      font-size: 1.3rem;
+    }
+    
+  }
+  
+  
+  /* Responsive Styles Restaurant List */
+  @media screen and (max-width: 1024px) {
+      .restaurant-item {
+        width: calc(50% - 20px);
+      }
+    
+      .restaurant-item__content h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+    
+      .restaurant-item__content p {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .restaurant-item {
+        width: 100%;
+      }
+    
+      .restaurant-item__content h3 {
+        font-size: 18px;
+      }
+    
+      .restaurant-item__content p {
+        font-size: 0.85rem;
+      }
+    
+      .restaurant__title {
+        font-size: 24px;
+      }
+  
+      .restaurant-item__header__poster {
+        width: 90%;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+  }
+    
+      .restaurant__info h3, .restaurant__description h3, .restaurant__menus h3, .restaurant__reviews h3 {
+        font-size: 22px;
+      }
+    
+      .restaurant__info p, .restaurant__description p, .restaurant__menus ul li, .review p {
+        font-size: 0.9rem;
+      }
+    }
+
+/* Detail Restaurant */
+@media screen and (max-width: 768px) {
+  .restaurant-detail {
+    width: 85%;
+    margin-top: 5px;
+  }
+
+  .restaurant__poster {
+    width: 85%;
+    max-height: 200px;
+    margin-top: 5px;
+  }
+
+  .restaurant__title {
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+  
+  .restaurant__info h3,
+  .restaurant__menus h3,
+  .restaurant__reviews h3 {
+    font-size: 1.5rem;
+  }
+  
+  .restaurant__info h4,
+  .restaurant__menus h4 {
+    font-size: 1.3rem;
+  }
+  
+  .restaurant__info p,
+  .restaurant__description p,
+  .restaurant__menus ul li,
+  .review p {
+    font-size: 1rem;
+  }
+
+  .review h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .restaurant-detail {
+    width: calc(85% - 0px);
+  }
+}
