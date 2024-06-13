@@ -20,11 +20,13 @@ class FavoriteRestaurantsView {
   // eslint-disable-next-line class-methods-use-this
   getFavoriteMovieTemplate() {
     return `
-     <div class="content">
-        <h2 class="content__heading">Your Liked Movie</h2>
-        <div id="restaurants" class="restaurants">
+     <<main id="mainContent">
+        <div class="content">
+          <h2 class="content__heading">Your Liked Restaurant</h2>
+          <p>Anda lapar kami siap kenyangkan</p>
+          <div id="restaurantList"></div>
         </div>
-      </div>
+      </main>
     `;
   }
 
@@ -57,7 +59,7 @@ class FavoriteRestaurantsView {
   }
 
   // eslint-disable-next-line class-methods-use-this, no-unused-vars
-  showFavoriteRestaurants(restaurants) {
+  showFavoriteRestaurants(restaurants = []) {
     let html;
     if (restaurants.length) {
       html = restaurants.reduce(
@@ -67,9 +69,13 @@ class FavoriteRestaurantsView {
     } else {
       html = this._getEmptyRestaurantTemplate();
     }
-    document.getElementById('restaurants').innerHTML = html;
-
-    document.getElementById('restaurants').dispatchEvent(new Event('restaurants:updated'));
+    const restaurantsContainer = document.getElementById('restaurants');
+    if (restaurantsContainer) {
+      restaurantsContainer.innerHTML = html;
+      restaurantsContainer.dispatchEvent(new Event('restaurants:updated'));
+    } else {
+      console.error("Element with id 'restaurants' not found.");
+    }
   }
 
   // eslint-disable-next-line class-methods-use-this

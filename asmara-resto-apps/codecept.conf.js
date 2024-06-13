@@ -21,4 +21,9 @@ exports.config = {
     I: './steps_file.js',
   },
   name: 'asmara-resto-apps',
+  plugins: {
+    screenshotOnFail: {
+      enabled: false,
+    },
+  },
 };

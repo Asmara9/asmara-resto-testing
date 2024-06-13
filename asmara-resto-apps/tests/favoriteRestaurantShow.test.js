@@ -7,7 +7,7 @@ describe('Showing all favorite restaurants', () => {
 
   const renderTemplate = () => {
     view = new FavoriteRestaurantsView();
-    document.body.innerHTML = view.getTemplate();
+    document.body.innerHTML = view.getFavoriteMovieTemplate();
   };
 
   beforeEach(() => {
@@ -21,7 +21,7 @@ describe('Showing all favorite restaurants', () => {
       };
 
       // eslint-disable-next-line no-new
-      new FavoriteRestaurantShowPresenter({
+      const presenter = new FavoriteRestaurantShowPresenter({
         view,
         favoriteRestaurants,
       });
@@ -71,7 +71,7 @@ describe('Showing all favorite restaurants', () => {
       };
       const presenter = new FavoriteRestaurantShowPresenter({
         view,
-        favoriteMovies,
+        favoriteRestaurants,
       });
       presenter._displayRestaurants([
         {
